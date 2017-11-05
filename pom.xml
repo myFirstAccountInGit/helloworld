@@ -71,57 +71,28 @@
             <version>${spring.version}</version>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>stage</id>
-            <properties>
-                <path>stage</path>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-
-        <profile>
-            <id>prod</id>
-            <properties>
-                <path>prod</path>
-            </properties>
-        </profile>
-    </profiles>
     <build>
         <plugins>
-            <!--<plugin>-->
-                <!--<groupId>org.mybatis.generator</groupId>-->
-                <!--<artifactId>mybatis-generator-maven-plugin</artifactId>-->
-                <!--<version>1.3.4</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>Generate MyBatis Artifacts</id>-->
-                        <!--<goals>-->
-                            <!--<goal>generate</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<dependencies>-->
-                    <!--<dependency>-->
-                        <!--<groupId>mysql</groupId>-->
-                        <!--<artifactId>mysql-connector-java</artifactId>-->
-                        <!--<version>6.0.6</version>-->
-                    <!--</dependency>-->
-                <!--</dependencies>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.4</version>
+                <executions>
+                    <execution>
+                        <id>Generate MyBatis Artifacts</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>6.0.6</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
-        <!--<testResources>-->
-            <!--<testResource>-->
-                <!--&lt;!&ndash;<directory>src/main/webapp/WEB-INF</directory>&ndash;&gt;-->
-                <!--<directory>{path}</directory>-->
-            <!--</testResource>-->
-        <!--</testResources>-->
-        <resources>
-            <resource>
-                <directory>test/${path}</directory>
-            </resource>
-        </resources>
     </build>
 </project>

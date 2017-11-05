@@ -17,25 +17,23 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Arrays;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/applicationContext.xml")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration("/applicationContext.xml")
 public class UsersMapperTest {
-    @Resource
-    private String message;
     @Test
     public void test1() throws MalformedURLException {
-        System.out.println(message);
-        URL u =new URL(new File("src/webapp/WEB-INF").toURI().toString());
-        URLClassLoader classLoader =new URLClassLoader(new URL[]{u});
-
-        System.out.println(Arrays.toString(classLoader.getURLs()));
-
-        URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-//        systemClassLoader.
-        System.out.println(Arrays.toString(systemClassLoader.getURLs()));
-//        InputStream is = ;
-        //../../src/webapp/WEB-INF/applicationContext.xml
-        System.out.println(ClassLoader.getSystemClassLoader().getClass());
-        System.out.println(ClassLoader.getSystemResource("jdbc.properties"));
+//        System.out.println(message);
+//        URL u =new URL(new File("src/webapp/WEB-INF").toURI().toString());
+//        URLClassLoader classLoader =new URLClassLoader(new URL[]{u});
+//
+//        System.out.println(Arrays.toString(classLoader.getURLs()));
+//
+//        URLClassLoader systemClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+////        systemClassLoader.
+//        System.out.println(Arrays.toString(systemClassLoader.getURLs()));
+////        InputStream is = ;
+//        //../../src/webapp/WEB-INF/applicationContext.xml
+//        System.out.println(ClassLoader.getSystemClassLoader().getClass());
+//        System.out.println(ClassLoader.getSystemResource("jdbc.properties"));
     }
 }
