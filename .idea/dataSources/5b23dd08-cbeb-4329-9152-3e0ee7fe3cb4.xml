@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="do_online@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="do_online">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="letter_matrix"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="oa"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="seckill"/>
+    <schema id="9" parent="1" name="smart-sso"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="tieba"/>
+    <table id="12" parent="2" name="users"/>
+    <column id="13" parent="12" name="Id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="12" name="UserName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="12" name="NickName">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="16" parent="12" name="Password">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="17" parent="12" name="LoginNameType">
+      <Position>5</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="18" parent="12" name="Guid">
+      <Position>6</Position>
+      <DataType>char(36)|0</DataType>
+    </column>
+    <column id="19" parent="12" name="Email">
+      <Position>7</Position>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="20" parent="12" name="EmailBound">
+      <Position>8</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="12" name="IconPath">
+      <Position>9</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="22" parent="12" name="Description">
+      <Position>10</Position>
+      <DataType>varchar(600)|0</DataType>
+    </column>
+    <column id="23" parent="12" name="UserType">
+      <Position>11</Position>
+      <Comment>A: Administrator, M: Manager, S: Staff, U: User</Comment>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;U&apos;</DefaultExpression>
+    </column>
+    <column id="24" parent="12" name="TestCatId">
+      <Position>12</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="25" parent="12" name="RefId">
+      <Position>13</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="26" parent="12" name="Level">
+      <Position>14</Position>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="27" parent="12" name="IsFeatured">
+      <Position>15</Position>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="12" name="Flag">
+      <Position>16</Position>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;M&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="12" name="LastName">
+      <Position>17</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="30" parent="12" name="FirstName">
+      <Position>18</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="31" parent="12" name="Gender">
+      <Position>19</Position>
+      <Comment>M: Male, F: Female</Comment>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;M&apos;</DefaultExpression>
+    </column>
+    <column id="32" parent="12" name="Dob">
+      <Position>20</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="33" parent="12" name="CvTeleMobile">
+      <Position>21</Position>
+      <DataType>varchar(20)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="34" parent="12" name="CvEmail">
+      <Position>22</Position>
+      <DataType>varchar(60)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="35" parent="12" name="CvIM01">
+      <Position>23</Position>
+      <DataType>varchar(50)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="36" parent="12" name="CvIM02">
+      <Position>24</Position>
+      <DataType>varchar(50)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="37" parent="12" name="AvailableKfc">
+      <Position>25</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="38" parent="12" name="KfcQuota">
+      <Position>26</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="12" name="WorkExpId">
+      <Position>27</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="12" name="EduTypeId">
+      <Position>28</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="41" parent="12" name="CurrRegionId">
+      <Position>29</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="42" parent="12" name="PermRegionId">
+      <Position>30</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="12" name="Address">
+      <Position>31</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="44" parent="12" name="City">
+      <Position>32</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="45" parent="12" name="Province">
+      <Position>33</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="46" parent="12" name="Country">
+      <Position>34</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="47" parent="12" name="PostalCode">
+      <Position>35</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="48" parent="12" name="TeleHome">
+      <Position>36</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="49" parent="12" name="TeleOffice">
+      <Position>37</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="50" parent="12" name="TeleMobile">
+      <Position>38</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="51" parent="12" name="TeleMobileBound">
+      <Position>39</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="52" parent="12" name="IM01">
+      <Position>40</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="53" parent="12" name="IM02">
+      <Position>41</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="54" parent="12" name="LoginTime">
+      <Position>42</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="55" parent="12" name="LoginSrc">
+      <Position>43</Position>
+      <Comment>登录程序来源，1-模考网，2-酷方网，PC-PC版, MO-移动版, AA-App Android，AI-App iOS, WX-Weixin微信，WA-WeixinApp微信小程序</Comment>
+      <DataType>varchar(3)|0</DataType>
+      <DefaultExpression>&apos;PC1&apos;</DefaultExpression>
+    </column>
+    <column id="56" parent="12" name="LastLoginTime">
+      <Position>44</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="57" parent="12" name="LastLoginSrc">
+      <Position>45</Position>
+      <Comment>上次登录程序来源，1-模考网，2-酷方网，PC-PC版, MO-移动版, AA-App Android，AI-App iOS, WX-Weixin微信，WA-WeixinApp微信小程序</Comment>
+      <DataType>varchar(3)|0</DataType>
+      <DefaultExpression>&apos;PC1&apos;</DefaultExpression>
+    </column>
+    <column id="58" parent="12" name="LoginCount">
+      <Position>46</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="59" parent="12" name="VisitCount">
+      <Position>47</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="60" parent="12" name="PostCount">
+      <Position>48</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="61" parent="12" name="AdCount">
+      <Position>49</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="62" parent="12" name="TestCount">
+      <Position>50</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="63" parent="12" name="ScheduleCount">
+      <Position>51</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="64" parent="12" name="TipCount">
+      <Position>52</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="65" parent="12" name="QuestionCount">
+      <Position>53</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="66" parent="12" name="GrpFrmPostCount">
+      <Position>54</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="67" parent="12" name="GrpFSPostCount">
+      <Position>55</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="68" parent="12" name="NewsCount">
+      <Position>56</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="69" parent="12" name="CommentCount">
+      <Position>57</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="70" parent="12" name="SCreditCount">
+      <Position>58</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="71" parent="12" name="TCreditCount">
+      <Position>59</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="72" parent="12" name="MPoints">
+      <Position>60</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="73" parent="12" name="RegTime">
+      <Position>61</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="74" parent="12" name="RegSrc">
+      <Position>62</Position>
+      <Comment>注册程序来源，1-模考网，2-酷方网，PC-PC版, MO-移动版, AA-App Android，AI-App iOS, WX-Weixin微信，WA-WeixinApp微信小程序</Comment>
+      <DataType>varchar(3)|0</DataType>
+      <DefaultExpression>&apos;PC1&apos;</DefaultExpression>
+    </column>
+    <index id="75" parent="12" name="IndexList">
+      <ColNames>Id
+Flag
+VisitCount
+TestCount
+CommentCount
+SCreditCount
+TCreditCount</ColNames>
+    </index>
+    <index id="76" parent="12" name="Index_Guid">
+      <ColNames>Guid</ColNames>
+    </index>
+    <index id="77" parent="12" name="Index_PostCount">
+      <ColNames>PostCount</ColNames>
+    </index>
+    <index id="78" parent="12" name="Index_SCreditCount">
+      <ColNames>SCreditCount</ColNames>
+    </index>
+    <index id="79" parent="12" name="Index_TCreditCount">
+      <ColNames>TCreditCount</ColNames>
+    </index>
+    <index id="80" parent="12" name="Index_TestCount">
+      <ColNames>TestCount</ColNames>
+    </index>
+    <index id="81" parent="12" name="Index_UserName">
+      <ColNames>UserName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="12" name="Index_VisitCount">
+      <ColNames>VisitCount</ColNames>
+    </index>
+    <key id="83" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="84" parent="12" name="Index_UserName">
+      <ColNames>UserName</ColNames>
+      <UnderlyingIndexName>Index_UserName</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

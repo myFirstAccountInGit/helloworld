@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+    PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--more infomation see http://www.mybatis.org/generator
+	注意此插件如果多次运行会在原来的文件后追加文本，而不会覆盖掉原来的文件，运行时可能会抛出异常Result Maps collection already contains value for com.dyl.dao.RoleMapper.BaseResultMap
+	<classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
+    <!-- 数据源配置文件路径 -->
+    <properties resource="jdbc.properties"/>
+	<!--targetRuntime:默认MyBatis3Simple-->
+    <context id="default" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false" />
+        </commentGenerator>
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.jdbcUrl}"
+                        userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+            <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+            NUMERIC 类型解析为java.math.BigDecimal -->
+<!--    <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver> -->
+
+        <!-- targetProject:生成POJO类的位置 -->
+        <javaModelGenerator targetPackage="com.giant.pojo" targetProject=".\src\main\java">
+            <!-- enableSubPackages:是否让schema作为包的后缀，默认false -->
+            <!-- <property name="enableSubPackages" value="true" /> -->
+			<!-- 默认false -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- targetProject:mapper映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="mapper"  targetProject=".\src\main\resources">
+            <!-- <property name="enableSubPackages" value="true" /> -->
+        </sqlMapGenerator>
+
+        <!-- targetPackage：mapper接口生成的位置 type:ANNOTATEDMAPPER,MIXEDMAPPER,XMLMAPPER -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.giant.mapper"  targetProject=".\src\main\java">
+            <!--<property name="enableSubPackages" value="true" />-->
+        </javaClientGenerator>
+<!--为防止生成其他数据库文件，需要配置catalog为数据库名(Oracle中为用户名)-->
+        <table tableName="users"/>
+<!--<table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
+		<property name="useActualColumnNames" value="true"/>
+		<generatedKey column="ID" sqlStatement="DB2" identity="true" />
+		<columnOverride column="DATE_FIELD" property="startDate" />
+		<ignoreColumn column="FRED" />
+		<columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+	</table>-->
+    </context>
+</generatorConfiguration>
